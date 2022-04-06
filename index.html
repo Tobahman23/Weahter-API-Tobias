@@ -35,7 +35,8 @@ $.get('https://api.openweathermap.org/data/2.5/weather?q=Stockholm&appid=6519f81
     let mintemp = Math.floor(data.main.temp_min);
     let maxtemp = Math.floor(data.main.temp_max);
     let humidity = Math.floor(data.main.humidity);
-    let iconimg = " http://openweathermap.org/img/wn/%22+data.weather[0].icon+%22.png";
+    let imagee = document.getElementById="iconImg";
+    imagee = " http://openweathermap.org/img/wn/%22+data.weather[0].icon+%22.png";
     $("#temp").html(temp);
     $("#mintemp").html(mintemp);
     $("#maxtemp").html(maxtemp);
