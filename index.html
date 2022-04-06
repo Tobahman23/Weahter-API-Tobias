@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API TEST - new folder</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index2.css">
 
     <script src="jquery-3.6.0.min.js"></script>
 
@@ -20,7 +20,7 @@
 </head>
 
 <body>
-        <div  id="weatherboi"style="background-color: white; border:5px double black;">
+        <div  id="weatherboi">
         <h1>Stockholm</h1>
         <img id="iconImg" src="" alt="icon"></img>
         <h2>Temp:<span id="temp"></span>°C</h2>
@@ -35,8 +35,7 @@ $.get('https://api.openweathermap.org/data/2.5/weather?q=Stockholm&appid=6519f81
     let mintemp = Math.floor(data.main.temp_min);
     let maxtemp = Math.floor(data.main.temp_max);
     let humidity = Math.floor(data.main.humidity);
-    let imagee = document.getElementById="iconImg";
-    imagee = " http://openweathermap.org/img/wn/%22+data.weather[0].icon+%22.png";
+    let iconimg = " http://openweathermap.org/img/wn/%22+data.weather[0].icon+%22.png";
     $("#temp").html(temp);
     $("#mintemp").html(mintemp);
     $("#maxtemp").html(maxtemp);
