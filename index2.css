@@ -1,38 +1,42 @@
 *{
     text-align:center;
-    background-image:url("aaa.jpg")
+    background-color:grey;
 }
 
 #weatherboi
 {
-    background-color:white;
     border: 5px double black;
-    color:aqua;
+    color:black;
+    padding-bottom:635px;
 }
 
 #cel
 {
     color:gold;
     font-size:xx-large;
+    margin-bottom:20px;
 }
 #maxc
 {
     color:green;
     font-size:xx-large;
+    margin-bottom:20px;
 }
 #minc
 {
     color:red;
     font-size:xx-large;
+    margin-bottom:20px;
 }
 #hum
 {
     color:blue;
     font-size:xx-large;
+    margin-bottom:20px;
 }
 .a
 {
-    color:white;
+    color:black;
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size:x-large;
 }
