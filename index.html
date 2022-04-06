@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API TEST - new folder</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js%22%3E"</script>
+
+    <style>
+        h1 {text-align: center;}
+        h2 {text-align: center;}
+        div {text-align: center;}
+    </style>
+
+</head>
+
+<body>
+        <div style="background-color: gray; border:1px solid green;">
+        <h1>Stockholm</h1>
+        <img id="iconImg" src="" alt="icon"></img>
+        <h2>Temp:<span id="temp"></span>°C</h2>
+        <h2>Min Temp:<span id="mintemp"></span>°C</h2>
+        <h2>Max Temp:<span id="maxtemp"></span>°C</h2>
+        <h2>Humidity:<span id="humidity"></span>%</h2>
+        </div>
+
+
+
+
+
+<script>
+$.get('', function(data){
+    let temp = Math.floor(data.main.temp);
+    let mintemp = Math.floor(data.main.temp_min);
+    let maxtemp = Math.floor(data.main.temp_max);
+    let humidity = Math.floor(data.main.humidity);
+    let iconimg = " http://openweathermap.org/img/wn/%22+data.weather[0].icon+%22.png";
+    $("#temp").html(temp);
+    $("#mintemp").html(mintemp);
+    $("#maxtemp").html(maxtemp);
+    $("#humidity").html(humidity);
+    $("#iconImg").attr("src", iconimg);
+
+});
+</script>
+
+</body>
+
+
+
+</html>
