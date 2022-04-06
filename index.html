@@ -8,7 +8,7 @@
     <title>API TEST - new folder</title>
     <link rel="stylesheet" href="style.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js%22%3E"</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js%22%3E"></script>
 
     <style>
         h1 {text-align: center;}
@@ -28,12 +28,8 @@
         <h2>Humidity:<span id="humidity"></span>%</h2>
         </div>
 
-
-
-
-
 <script>
-$.get('', function(data){
+$.get('https://api.openweathermap.org/data/2.5/weather?q=Stockholm&appid=6519f819dad2fa09be9840533c05c3e1&units=metric', function(data){
     let temp = Math.floor(data.main.temp);
     let mintemp = Math.floor(data.main.temp_min);
     let maxtemp = Math.floor(data.main.temp_max);
@@ -45,8 +41,8 @@ $.get('', function(data){
     $("#humidity").html(humidity);
     $("#iconImg").attr("src", iconimg);
 
-});
-</script>
+}); </script>
+
 
 </body>
 
