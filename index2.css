@@ -1,7 +1,38 @@
-
+*{
+    text-align:center;
+    background-image:url("aaa.jpg")
+}
 
 #weatherboi
 {
     background-color:white;
     border: 5px double black;
+    color:aqua;
+}
+
+#cel
+{
+    color:gold;
+    font-size:xx-large;
+}
+#maxc
+{
+    color:green;
+    font-size:xx-large;
+}
+#minc
+{
+    color:red;
+    font-size:xx-large;
+}
+#hum
+{
+    color:blue;
+    font-size:xx-large;
+}
+.a
+{
+    color:white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:x-large;
 }

@@ -5,42 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API TEST - new folder</title>
+    <title>Weather API</title>
     <link rel="stylesheet" href="index2.css">
-
     <script src="jquery-3.6.0.min.js"></script>
-
-
-    <style>
-        h1 {text-align: center;}
-        h2 {text-align: center;}
-        div {text-align: center;}
-    </style>
-
 </head>
 
 <body>
         <div  id="weatherboi">
         <h1>Stockholm</h1>
-        <img id="iconImg" src="" alt="icon"></img>
-        <h2>Temp:<span id="temp"></span>°C</h2>
-        <h2>Min Temp:<span id="mintemp"></span>°C</h2>
-        <h2>Max Temp:<span id="maxtemp"></span>°C</h2>
-        <h2>Humidity:<span id="humidity"></span>%</h2>
+        <div id="icon"><img id="wicon" src="" alt="Weather icon"></div>
+        <h2 class="a">Temperature:<span id="cel"></span>°C</h2>
+        <h2 class="a">Max Temperature:<span id="maxc"></span>°C</h2>
+        <h2 class="a">Min Temperature:<span id="minc"></span>°C</h2>
+        <h2 class="a">Humidity:<span id="hum"></span>%</h2>
         </div>
 
 <script>
 $.get('https://api.openweathermap.org/data/2.5/weather?q=Stockholm&appid=6519f819dad2fa09be9840533c05c3e1&units=metric', function(data){
-    let temp = Math.floor(data.main.temp);      
-    let mintemp = Math.floor(data.main.temp_min);
-    let maxtemp = Math.floor(data.main.temp_max);
-    let humidity = Math.floor(data.main.humidity);
-    let iconimg = " http://openweathermap.org/img/wn/%22+data.weather[0].icon+%22.png";
-    $("#temp").html(temp);
-    $("#mintemp").html(mintemp);
-    $("#maxtemp").html(maxtemp);
-    $("#humidity").html(humidity);
-    $("#iconImg").attr("src", iconimg);
+
+    let celsius = Math.floor(data.main.temp);  
+    $("#cel").html(celsius);
+
+    let mincel = Math.floor(data.main.temp_min);
+    $("#minc").html(mincel);
+
+    let maxcel = Math.floor(data.main.temp_max);
+    $("#maxc").html(maxcel);
+
+    let humid = Math.floor(data.main.humidity);
+    $("#hum").html(humid);
+
+    let weathericon = " http://openweathermap.org/img/wn/data.weather[0].icon.png"; //bilden funkade först men verkar inte kunna få den att funka längre
+    $("#wicon").attr("src", weathericon);
 
 }); </script>
 
